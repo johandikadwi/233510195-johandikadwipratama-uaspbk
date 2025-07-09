@@ -3,130 +3,121 @@
     <img src="/images/logo.png" alt="Logo Jamu" class="logo animate-logo" />
     <h1 class="animate-text">
       <span>Selamat Datang di</span><br />
-      <strong>Toko Perabotan <span class="highlight">Nusantara</span></strong>
+      <strong> MAKANAN KITA MAKANAN <span class="highlight">Nusantara</span></strong>
     </h1>
     <p class="animate-text">
-      perabotan dalam negeri dengan kualitas yang keren 
+      LAPAR MAKAN TEMAN KU  
     </p>
     <router-link to="/produk" class="btn animate-btn">Lihat Produk</router-link>
   </div>
 </template>
 
 
+
 <style scoped>
 .home-container {
   text-align: center;
-  padding: 40px 15px;
-  background: linear-gradient(rgba(47, 37, 17, 0.7), rgba(47, 37, 17, 0.7)), url('/images/bg-home.jpg') no-repeat center center;
-  background-size: cover;
-  border-radius: 12px;
-  max-width: 640px;
-  margin: 40px auto;
-  color: #fff;
-  min-height: 65vh;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(135deg, #cce7ff, #e0f7fa);
+  border-radius: 20px;
+  max-width: 720px;
+  margin: 60px auto;
+  color: #0f172a;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
   position: relative;
+  overflow: hidden;
 }
 
+/* Logo */
 .logo {
-  width: 90px;
+  width: 100px;
   margin-bottom: 1.5rem;
   border-radius: 50%;
-  border: 3px solid #61a74c;
-  box-shadow: 0 0 12px rgba(181, 209, 161, 0.5);
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  background-color: white;
 }
 
-/* Animasi Logo */
+/* Logo floating */
 .animate-logo {
   animation: floatLogo 3s ease-in-out infinite;
 }
 
 @keyframes floatLogo {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
+/* Title */
 h1 {
-  font-size: 2.2rem;
-  line-height: 1.3;
-  font-family: 'Georgia', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
 }
 
 .highlight {
-  color: #61a74c;
-  font-style: italic;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  color: #0ea5e9;
+  font-style: normal;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
 }
 
 p {
   margin-top: 1rem;
   font-size: 1.1rem;
-  font-weight: 300;
-  max-width: 400px;
+  font-weight: 400;
+  color: #334155;
+  max-width: 480px;
 }
 
+/* Button */
 .btn {
   margin-top: 2rem;
   display: inline-block;
-  padding: 0.7rem 1.4rem;
-  background-color: #61a74c;
-  color: #000;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(14, 165, 233, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #1b5d0f;
+  background: linear-gradient(to right, #2563eb, #0891b2);
   transform: scale(1.05);
 }
 
-/* Animasi Fade Masuk */
+/* Animasi masuk */
 .animate-container {
   animation: fadeSlideUp 1.2s ease forwards;
   opacity: 0;
 }
 
 @keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .animate-text {
-  animation: fadeIn 2s ease forwards;
+  animation: fadeIn 1.6s ease forwards;
   opacity: 0;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-btn {
-  animation: fadeIn 2.4s ease forwards;
+  animation: fadeIn 2s ease forwards;
 }
 </style>

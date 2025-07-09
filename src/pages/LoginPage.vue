@@ -38,45 +38,47 @@ export default {
 <style scoped>
 .login-page {
   min-height: 100vh;
-  background: linear-gradient(
-      rgba(5, 150, 105, 0.85),
-      rgba(15, 118, 110, 0.9)
-    ),
-    url('/images/bg-money.jpg') no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: gradientFlow 12s ease infinite;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Card login */
+/* Efek blur + neon */
+.login-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/bg-money.jpg') center/cover no-repeat;
+  filter: blur(18px) brightness(0.4);
+  z-index: -2;
+}
+
+.login-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.5), rgba(59, 130, 246, 0.3));
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* Login card glassmorphism */
 .login-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
   padding: 2.5rem 2rem;
   border-radius: 20px;
-  max-width: 380px;
+  max-width: 400px;
   width: 100%;
   text-align: center;
-  color: #f0fdf4;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  color: #e0f2fe;
+  box-shadow: 0 12px 32px rgba(30, 64, 175, 0.4);
   animation: bounceIn 0.8s ease;
-}
-
-/* Animasi gradasi */
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Bounce animasi saat muncul */
-@keyframes bounceIn {
-  0% { opacity: 0; transform: scale(0.7); }
-  60% { transform: scale(1.05); }
-  80% { transform: scale(0.98); }
-  100% { opacity: 1; transform: scale(1); }
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Input */
@@ -86,47 +88,55 @@ input {
   margin-bottom: 1rem;
   border: none;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #f0fdf4;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0f2fe;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 input:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px #3b82f6;
   transform: scale(1.03);
 }
 
 input::placeholder {
-  color: #d1fae5;
+  color: #bae6fd;
 }
 
-/* Tombol */
+/* Tombol glow */
 button.glow-button {
   width: 100%;
   padding: 0.8rem;
-  background: linear-gradient(to right, #10b981, #047857);
+  background: linear-gradient(to right, #2563eb, #3b82f6);
   color: white;
   border: none;
   border-radius: 14px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
   transition: all 0.3s ease;
 }
 
 .glow-button:hover {
-  background: linear-gradient(to right, #1c956e, #065f46);
-  box-shadow: 0 10px 24px rgba(33, 105, 81, 0.6);
-  transform: scale(1.04);
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.6);
+  transform: scale(1.05);
 }
 
-/* Error */
+/* Animasi muncul */
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.7); }
+  60% { transform: scale(1.05); }
+  80% { transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Error text */
 .error {
-  color: #f87171;
+  color: #031681;
   margin-top: 1rem;
   font-weight: 500;
   animation: shake 0.4s ease;

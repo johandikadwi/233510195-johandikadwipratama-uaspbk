@@ -7,7 +7,7 @@
     </main>
 
     <footer v-if="$route.path !== '/login'" class="app-footer">
-      Pemrograman Berbasis Komponen 2025 @ Therecya Silitonga - 233510300
+      Pbk 2025 @ johan
     </footer>
   </div>
 </template>

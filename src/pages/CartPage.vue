@@ -48,8 +48,8 @@ const cart = useCartStore()
 
 .cart-item {
   display: flex;
-  background: #7b9a81;
-  border: 1px solid #6d8f6c;
+  background: #9bad9f;
+  border: 1px solid #6c8f87;
   border-radius: 12px;
   padding: 1rem;
   gap: 1rem;
@@ -77,7 +77,7 @@ const cart = useCartStore()
 }
 
 .quantity-controls button {
-  background-color: #065f46;
+  background-color: #85a2b9;
   color: white;
   border: none;
   padding: 4px 10px;
@@ -86,11 +86,11 @@ const cart = useCartStore()
 }
 
 .quantity-controls .delete {
-  background-color: #dc2626;
+  background-color: #090b66;
 }
 
 .checkout-button {
-  background-color: #f59e0b;
+  background-color: #016363;
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;

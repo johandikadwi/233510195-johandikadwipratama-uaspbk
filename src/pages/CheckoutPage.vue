@@ -113,7 +113,7 @@ function prosesPembayaran() {
 
 .cart-item {
   display: flex;
-  background: #7b9a81; /* bg-gray-800 */
+  background: #579fcf; /* bg-gray-800 */
   border: 1px solid #838a71; /* border-gray-700 */
   border-radius: 12px;
   padding: 1rem;

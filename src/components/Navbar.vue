@@ -45,7 +45,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #33573e; /* fresh green */
+  background-color: #1d748a; /* fresh green */
   padding: 1rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 12px;

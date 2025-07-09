@@ -136,7 +136,7 @@ button:hover {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #16a34a;
+  background-color: #8cb6f5;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;

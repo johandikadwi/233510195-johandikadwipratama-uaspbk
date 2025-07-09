@@ -1,73 +1,73 @@
 {
     "produk": [{
             "id": 1,
-            "nama": "Meja Makan Minimalis",
-            "deskripsi": "Meja kayu jati 6 kursi cocok untuk ruang makan modern.",
-            "harga": 2500000,
-            "gambar": "/images/meja.jpg"
+            "nama": "Nasi Goreng Spesial",
+            "deskripsi": "Nasi goreng dengan ayam, telur, dan kerupuk lengkap.",
+            "harga": 25000,
+            "gambar": "/images/nasi-goreng.jpg"
         },
         {
             "id": 2,
-            "nama": "Sofa L-Shape Abu",
-            "deskripsi": "Sofa berbentuk L berbahan kain linen halus dan empuk.",
-            "harga": 3200000,
-            "gambar": "/images/sofa.jpg"
+            "nama": "Ayam Geprek Level 5",
+            "deskripsi": "Ayam crispy dengan sambal pedas menggugah selera.",
+            "harga": 22000,
+            "gambar": "/images/ayam-geprek.jpg"
         },
         {
             "id": 3,
-            "nama": "Rak Buku Kayu 5 Susun",
-            "deskripsi": "Rak buku vertikal hemat ruang dengan desain industrial.",
-            "harga": 750000,
-            "gambar": "/images/rak-buku.jpg"
+            "nama": "Mie Goreng Jawa",
+            "deskripsi": "Mie goreng khas Jawa dengan sayuran dan telur.",
+            "harga": 20000,
+            "gambar": "/images/mie-goreng.jpg"
         },
         {
             "id": 4,
-            "nama": "Lemari Pakaian 3 Pintu",
-            "deskripsi": "Lemari modern dengan kaca tengah dan banyak ruang penyimpanan.",
-            "harga": 1800000,
-            "gambar": "/images/lemari.jpg"
+            "nama": "Sate Ayam",
+            "deskripsi": "10 tusuk sate ayam dengan bumbu kacang dan lontong.",
+            "harga": 30000,
+            "gambar": "/images/sate-ayam.jpg"
         },
         {
             "id": 5,
-            "nama": "Meja Belajar Anak",
-            "deskripsi": "Meja belajar anak dengan laci dan papan tulis kecil.",
-            "harga": 650000,
-            "gambar": "/images/meja-belajar.jpg"
+            "nama": "Bakso Urat Komplit",
+            "deskripsi": "Bakso urat, bakso halus, tahu, mie, dan kuah gurih.",
+            "harga": 23000,
+            "gambar": "/images/bakso.jpg"
         },
         {
             "id": 6,
-            "nama": "Buffet TV Minimalis",
-            "deskripsi": "Meja TV rendah dengan kabinet penyimpanan serbaguna.",
-            "harga": 1100000,
-            "gambar": "/images/tv.jpg"
+            "nama": "Soto Ayam Lamongan",
+            "deskripsi": "Soto ayam dengan koya, telur, dan sambal pedas.",
+            "harga": 25000,
+            "gambar": "/images/soto.jpg"
         },
         {
             "id": 7,
-            "nama": "Kursi Kerja Ergonomis",
-            "deskripsi": "Kursi kerja dengan sandaran fleksibel dan bisa diatur.",
-            "harga": 900000,
-            "gambar": "/images/kursi.jpg"
+            "nama": "Nasi Padang Komplit",
+            "deskripsi": "Nasi dengan rendang, sayur nangka, sambal, dan kerupuk.",
+            "harga": 28000,
+            "gambar": "/images/nasi-padang.jpg"
         },
         {
             "id": 8,
-            "nama": "Meja Kopi Bundar",
-            "deskripsi": "Meja ruang tamu bulat dengan desain elegan.",
-            "harga": 550000,
-            "gambar": "/images/kopi.jpg"
+            "nama": "Gado-Gado",
+            "deskripsi": "Sayuran rebus, lontong, telur, dan saus kacang.",
+            "harga": 20000,
+            "gambar": "/images/gado-gado.jpg"
         },
         {
             "id": 9,
-            "nama": "Lemari Dapur Gantung",
-            "deskripsi": "Lemari dapur kayu untuk penyimpanan di dinding.",
-            "harga": 1200000,
-            "gambar": "/images/dapur.jpg"
+            "nama": "Es Teh Manis",
+            "deskripsi": "Minuman segar teh manis dingin.",
+            "harga": 5000,
+            "gambar": "/images/es-teh.jpg"
         },
         {
             "id": 10,
-            "nama": "Rak Sepatu 4 Susun",
-            "deskripsi": "Rak sepatu hemat tempat dengan kapasitas hingga 12 pasang.",
-            "harga": 400000,
-            "gambar": "/images/sepatu.jpg"
+            "nama": "Es Campur",
+            "deskripsi": "Minuman es dengan campuran buah dan sirup manis.",
+            "harga": 15000,
+            "gambar": "/images/es-campur.jpg"
         }
     ]
 }
