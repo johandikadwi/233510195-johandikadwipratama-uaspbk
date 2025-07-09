@@ -1,0 +1,26 @@
+{
+    "foods": [{
+            "id": 1,
+            "name": "Nasi Goreng",
+            "description": "Nasi goreng dengan telur dan ayam",
+            "price": 20000,
+            "image": "nasi-goreng.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Mie Ayam",
+            "description": "Mie ayam dengan pangsit dan sayur",
+            "price": 18000,
+            "image": "mie-ayam.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Es Teh Manis",
+            "description": "Minuman dingin teh manis",
+            "price": 5000,
+            "image": "es-teh.jpg"
+        }
+    ],
+    "cart": [],
+    "orders": []
+}
