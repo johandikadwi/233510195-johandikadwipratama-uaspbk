@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     login() {
-      if (this.username === 'therecyasilitonga' && this.password === '233510300') {
+      if (this.username === 'johan dika dwi pratama' && this.password === '233510195') {
         localStorage.setItem('isLoggedIn', 'true');
         this.$router.push('/beranda');
       } else {
