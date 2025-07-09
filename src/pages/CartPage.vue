@@ -1,113 +1,101 @@
 <template>
-  <div class="cart-page">
-    <h2 class="title">🛒 Keranjang Anda</h2>
-
-    <div v-if="store.cart.length === 0" class="empty">Keranjang masih kosong.</div>
+  <div>
+    <h1>Keranjang Belanja</h1>
+    <div v-if="cart.items.length === 0">
+      <p>Keranjang kosong</p>
+    </div>
     <div v-else class="cart-list">
-      <div v-for="item in store.cart" :key="item.id" class="cart-item">
-        <p>{{ item.name }} - Rp{{ item.price.toLocaleString() }}</p>
-        <button class="btn-remove" @click="remove(item.id)">Hapus</button>
+      <div
+        v-for="item in cart.items"
+        :key="item.id"
+        class="cart-item"
+      >
+        <img :src="item.gambar" :alt="item.nama" class="product-image" />
+        <div class="item-info">
+          <h3>{{ item.nama }}</h3>
+          <p>{{ item.deskripsi }}</p>
+          <p>Rp {{ item.harga.toLocaleString('id-ID') }} x {{ item.quantity }}</p>
+          <div class="quantity-controls">
+            <button @click="cart.decrement(item.id)">-</button>
+            <span>{{ item.quantity }}</span>
+            <button @click="cart.increment(item.id)">+</button>
+            <button @click="cart.removeFromCart(item.id)" class="delete">Hapus</button>
+          </div>
+        </div>
       </div>
 
-      <p class="total">Total: Rp{{ store.totalCartPrice.toLocaleString() }}</p>
-
-      <button class="btn-order" @click="pesan">Pesan Sekarang</button>
+      <hr />
+      <p><strong>Total: Rp {{ cart.totalPrice.toLocaleString('id-ID') }}</strong></p>
+      <router-link to="/checkout">
+        <button class="checkout-button">Checkout</button>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useFoodStore } from '@/store/foodStore'
-import { useRouter } from 'vue-router'
-
-const store = useFoodStore()
-const router = useRouter()
-
-function remove(id) {
-  store.removeFromCart(id)
-}
-
-function pesan() {
-  const orderData = {
-    items: [...store.cart],
-    total: store.totalCartPrice,
-    timestamp: new Date().toISOString()
-  }
-
-  store.placeOrder(orderData)
-  router.push('/orders')
-}
+import { useCartStore } from '../store/cartStore'
+const cart = useCartStore()
 </script>
 
 <style scoped>
-.cart-page {
-  background-color: #fff8f5;
-  min-height: 100vh;
-  padding: 2rem;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.title {
-  font-size: 2rem;
-  color: #b71c1c;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.empty {
-  text-align: center;
-  color: #999;
-  font-size: 1.2rem;
-}
-
 .cart-list {
-  max-width: 500px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .cart-item {
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 2px solid #f8d7da;
-  border-radius: 8px;
   display: flex;
-  justify-content: space-between;
+  background: #7b9a81;
+  border: 1px solid #6d8f6c;
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 1rem;
   align-items: center;
+  color: #f0fdf4;
 }
 
-.btn-remove {
-  background-color: #e57373;
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.quantity-controls button {
+  background-color: #065f46;
   color: white;
   border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-remove:hover {
-  background-color: #c62828;
-}
-
-.total {
-  font-weight: bold;
-  text-align: right;
-  margin-top: 1rem;
-}
-
-.btn-order {
-  margin-top: 1rem;
-  width: 100%;
-  background-color: #d32f2f;
-  color: white;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border: none;
+  padding: 4px 10px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.btn-order:hover {
-  background-color: #b71c1c;
+.quantity-controls .delete {
+  background-color: #dc2626;
+}
+
+.checkout-button {
+  background-color: #f59e0b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 </style>
